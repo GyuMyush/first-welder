@@ -1,0 +1,255 @@
+:root {
+    --accent-color: #1A43D6;
+    --swiper-theme-color: rgba(217, 217, 217, 0.3) !important;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Vinnytsia Sans', Arial, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background: #101010;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+body a {
+    text-decoration: none;
+}
+
+/*ШАПКА*/
+
+header {
+    position: absolute;
+    width: 1200px;
+    height: 37px;
+    left: 360px;
+    padding: 40px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Vinnytsia Sans', Arial, sans-serif;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 37px;
+
+    color: var(--accent-color);
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+nav a {
+    display: inline-block;
+
+    font-family: 'Vinnytsia Sans', Arial, sans-serif;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+}
+
+nav a:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #fff;
+    transition: width 0.4s ease-in-out;
+}
+
+nav a:hover:after,
+nav a:focus:after {
+    width: 100%;
+}
+
+/*ПЕРВЫЙ СЛАЙД*/
+
+.swiper-slide {
+    /* сверху | справа | снизу | слева */
+    padding: 100px 0 0;
+}
+
+.swiper-slide:nth-child(1) {
+    display: flex;
+}
+
+.swiper-slide:nth-child(1) img{
+    width: 770px;
+    height: 770px;
+    
+    position: absolute;
+    opacity: 0.4;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.swiper-slide:nth-child(1) h1{
+
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 61px;
+}
+
+.mini-description {
+    /* сверху | справа | снизу | слева */
+    margin: 0 0 25px 25px;
+    line-height: 25px;
+    width: 28.385vw;
+    letter-spacing: 0.05em;
+
+    color: #CECECE;
+}
+
+
+/*СЛАЙДЕР*/
+.swiper {
+    height: 100%;
+}
+
+.swiper-wrapper {
+    margin-left: 375px;
+}
+
+.swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    /*
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+*/
+}
+
+.swiper-pagination-bullet {
+    width: 56px !important;
+    height: 56px !important;
+
+    margin: 100px 0 !important;
+    margin-right: 16.51vw !important;
+
+    font-family: 'Vinnytsia Sans', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 56px;
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: var(--accent-color) !important;
+}
+
+.srvs-cont {
+    width: 600px;
+    margin-left: 25px;    
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.srvs-cont h4 {
+    margin: 0;
+}
+
+.srvc-elmnt{
+    /* сверху | справа | снизу | слева */
+    padding: 1px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    background-color: var(--accent-color);
+}
+
+/* стили контактов */
+.btn-cont {
+    
+}
+
+/* стили для кнопок */
+.button-order {
+    padding: 16px 36px;
+    text-align: center;
+    cursor: pointer;
+
+    background: var(--accent-color);
+    color: #fff;
+
+    border-radius: 50px;
+    border: none;
+
+    font-family: 'Vinnytsia Sans';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.button-order:hover{
+    transition: all 0.2s;
+    box-shadow: 0px 0px 10px var(--accent-color), inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-order:not(:hover){
+    transition: all 0.3s;
+}
+
+.button-services {
+    padding: 14px 34px;
+    cursor: pointer;
+
+    outline: 4px solid var(--accent-color);
+    border: 0;
+    outline-offset: -1px;
+    border-radius: 50px;
+
+    background-color: rgba(16, 16, 16, 0);
+    color: var(--accent-color);
+
+    font-family: 'Vinnytsia Sans';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.button-services:hover {
+    color:#fff;
+    transition: all 0.2s;
+    filter: drop-shadow(0px 0px 10px #1A43D6);
+    backdrop-filter: blur(50px);
+}
+
+.button-services:not(:hover){
+    transition: all 0.3s;
+}

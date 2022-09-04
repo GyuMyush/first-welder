@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/icon.svg" type="image/svg">
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <title>wilder</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="logo" href="#">first-welder.ru</a>
+        <nav>
+            <a href="#">главная</a>
+            <a href="#">услуги</a>
+            <a href="#">контакты</a>
+        </nav>
+    </header>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <h1>Сварочные работы</h1>
+
+                <p class="mini-description">Кстати, базовые сценарии поведения пользователей представляют собой не что
+                    иное, как квинтэссенцию победы маркетинга над разумом и должны быть превращены в посмешище, хотя
+                    само их существование приносит несомненную пользу обществу.</p>
+
+                <div class="srvs-cont">
+                    <h4 class="srvc-elmnt">электродуговая</h4>
+                    <h4 class="srvc-elmnt">аргонно-дуговая</h4>
+                    <h4 class="srvc-elmnt">контактная</h4>
+                    <h4 class="srvc-elmnt">газовая</h4>
+                    <h4 class="srvc-elmnt">плазменная</h4>
+                    <h4 class="srvc-elmnt">лазерная</h4>
+                    <h4 class="srvc-elmnt">изготовление металоконструкций</h4>
+                </div>
+
+                <div class="contacts">
+                    <a href="tel:+79233843223">+7 (923) 384 32-23</a>
+                    <a href="mailto:name.surname@mail.com">name.surname @mail.com</a>
+                </div>
+
+                <div class="btn-cont">
+                    <input href="#" class="button-order" type="submit" value="оставить заявку">
+
+                    <input href="#" class="button-services" type="submit" value="все услуги">
+                </div>
+
+                <!-- <img src="img/weld-pic.gif" alt="изображение"> -->
+            </div>
+
+            <div class="swiper-slide">
+                <h1>Список услуг</h1>
+            </div>
+
+            <div class="swiper-slide">
+                <h1>Как с нами связаться</h1>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            mousewheel: true,
+            speed: 1000,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
